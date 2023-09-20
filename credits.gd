@@ -11,10 +11,5 @@ func _process(_delta):
 	pass
 
 
-
-func _on_play_button_pressed():
-	Global.goto_scene("res://Pachinko.tscn")
-
-
-func _on_credits_button_pressed():
-	Global.goto_scene("res://Credits.tscn")
+func _on_button_2_pressed():
+	Global.goto_scene("res://MainMenu.tscn")

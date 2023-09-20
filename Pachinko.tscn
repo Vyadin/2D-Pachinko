@@ -52,12 +52,13 @@ metadata/_edit_use_anchors_ = true
 [node name="PlayerScene" type="Node2D" parent="Background"]
 position = Vector2(550, 50)
 
-[node name="Player" type="RigidBody2D" parent="Background/PlayerScene" node_paths=PackedStringArray("textBox", "gameOver")]
+[node name="Player" type="RigidBody2D" parent="Background/PlayerScene" node_paths=PackedStringArray("textBox", "gameOver", "playAgain")]
 physics_material_override = SubResource("PhysicsMaterial_ksg8i")
 gravity_scale = 0.0
 script = ExtResource("1_fbagr")
 textBox = NodePath("../../Textlabels/PointsLabel")
 gameOver = NodePath("../../Textlabels/GameOverLabel")
+playAgain = NodePath("../../Buttons/PlayAgain")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PlayerScene/Player"]
 shape = SubResource("CircleShape2D_2ackq")
@@ -711,6 +712,16 @@ offset_bottom = 205.0
 text = "Game over!"
 label_settings = SubResource("LabelSettings_v7mlj")
 
+[node name="Buttons" type="Node2D" parent="Background"]
+
+[node name="PlayAgain" type="Button" parent="Background/Buttons"]
+visible = false
+offset_left = 519.0
+offset_top = 183.0
+offset_right = 630.0
+offset_bottom = 221.0
+text = "Play Again"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ansba")
 autoplay = true
@@ -720,3 +731,4 @@ menuMusic = ExtResource("2_ansba")
 
 [connection signal="body_entered" from="Background/EndZones/100" to="Background/PlayerScene/Player" method="_on__body_entered" binds= [100]]
 [connection signal="body_entered" from="Background/EndZones/200" to="Background/PlayerScene/Player" method="_on__body_entered" binds= [200]]
+[connection signal="pressed" from="Background/Buttons/PlayAgain" to="Background/PlayerScene/Player" method="_on_play_again_pressed"]

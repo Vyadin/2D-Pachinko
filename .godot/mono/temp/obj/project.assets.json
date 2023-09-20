@@ -93,11 +93,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 - Game Design\\Godot\\2d Pachinko.csproj",
+      "projectUniqueName": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 - Game Design\\2D Pachinko\\2d Pachinko.csproj",
       "projectName": "2d Pachinko",
-      "projectPath": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 - Game Design\\Godot\\2d Pachinko.csproj",
+      "projectPath": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 - Game Design\\2D Pachinko\\2d Pachinko.csproj",
       "packagesPath": "C:\\Users\\silve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 - Game Design\\Godot\\.godot\\mono\\temp\\obj\\",
+      "outputPath": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 - Game Design\\2D Pachinko\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\silve\\AppData\\Roaming\\NuGet\\NuGet.Config"

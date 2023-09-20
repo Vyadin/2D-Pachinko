@@ -2,6 +2,7 @@ extends RigidBody2D
 
 @export var textBox : Label
 @export var gameOver : Label
+@export var playAgain : Button
 
 var setup = true;
 var won = false;
@@ -9,9 +10,11 @@ var moveSpeed = 80;
 var direction = 0;
 var points = 0
 
-var numBalls = 3
+var totalBalls = 2
 
-var spawnPoint = Vector2(600, 100)
+var balls = totalBalls
+
+var spawnPoint = Vector2(550, 50)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,8 +32,20 @@ func _physics_process(_delta):
 		if Input.is_action_pressed("ui_accept"):
 			gravity_scale = 1
 			setup = false
-			numBalls -= 1
-			textBox.text = "Points: " + str(points) + "\nBalls: " + str(numBalls)
+			balls -= 1
+			textBox.text = "Points: " + str(points) + "\nBalls: " + str(balls)
+
+func resetBall():
+	print("Moving ball...")
+	self.gravity_scale = 0
+	self.freeze = true
+	self.global_transform.origin = spawnPoint
+	self.freeze = false
+	setup = true
+	won = false
+
+func updateScore():
+	textBox.text = "Points: " + str(points) + "\nBalls: " + str(balls)
 
 func _on__body_entered(body, extra_arg_0):
 	if not won:
@@ -39,19 +54,21 @@ func _on__body_entered(body, extra_arg_0):
 
 			print("Player won " + str(extra_arg_0) + " points!")
 			won = true
-			textBox.text = "Points: " + str(points) + "\nBalls: " + str(numBalls)
+			updateScore()
 
 			await get_tree().create_timer(3.0).timeout
 			
-			if numBalls > 0:
-				self.move_local_x(550)
-				self.move_local_y(50)
-				self.gravity_scale = 0
-				self.freeze = true
-				self.global_transform.origin = spawnPoint
-				self.freeze = false
-				won = false
-				setup = true
+			if balls > 0:
+				resetBall()
 			else:
+				resetBall()
 				print("Game over!")
 				gameOver.visible = true
+				playAgain.visible = true
+
+func _on_play_again_pressed():
+	points = 0
+	balls = totalBalls
+	updateScore()
+	gameOver.visible = false
+	playAgain.visible = false

@@ -38,7 +38,7 @@ offset_right = 664.0
 offset_bottom = 344.0
 text = "Play"
 
-[node name="Button2" type="Button" parent="CanvasLayer"]
+[node name="CreditsButton" type="Button" parent="CanvasLayer"]
 offset_left = 448.0
 offset_top = 456.0
 offset_right = 618.0
@@ -46,3 +46,4 @@ offset_bottom = 504.0
 text = "Credits"
 
 [connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CreditsButton" to="." method="_on_credits_button_pressed"]

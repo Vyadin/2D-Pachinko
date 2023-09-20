@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6rcpqdmvp7v"]
+
+[ext_resource type="Script" path="res://credits.gd" id="1_4v4ka"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_22l4e"]
+font_size = 80
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4v4ka")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1149.0
+offset_bottom = 650.0
+color = Color(0.235294, 0.607843, 0.87451, 1)
+
+[node name="GameTitle" type="Label" parent="CanvasLayer"]
+offset_left = 368.0
+offset_top = 64.0
+offset_right = 723.0
+offset_bottom = 177.0
+text = "Pachinko"
+label_settings = SubResource("LabelSettings_22l4e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 472.0
+offset_top = 442.0
+offset_right = 642.0
+offset_bottom = 490.0
+text = "Main Menu"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 467.0
+offset_top = 231.0
+offset_right = 639.0
+offset_bottom = 335.0
+text = "DEVELOPERS
+
+Jacob Armstrong
+Angel Armendariz"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
