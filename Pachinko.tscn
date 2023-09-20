@@ -1,0 +1,722 @@
+[gd_scene load_steps=17 format=3 uid="uid://c515gf5dun5so"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_fbagr"]
+[ext_resource type="AudioStream" uid="uid://cwnh52mmupilw" path="res://Debussy - Clair de Lune.mp3" id="2_ansba"]
+[ext_resource type="Script" path="res://music.gd" id="3_ljl08"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ksg8i"]
+bounce = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ackq"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3f4ev"]
+
+[sub_resource type="Gradient" id="Gradient_vgvww"]
+colors = PackedColorArray(0.951008, 0, 0.149513, 1, 0.486275, 0.486275, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kcak8"]
+gradient = SubResource("Gradient_vgvww")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6x8hs"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_hccdx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7fn2"]
+size = Vector2(15.4205, 20.6604)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c122s"]
+lightmap_size_hint = Vector2i(14, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb2sl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_oub7k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_st4fu"]
+font_size = 30
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v7mlj"]
+font_size = 50
+
+[node name="Main Menu" type="Node2D"]
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_right = 1150.0
+offset_bottom = 650.0
+color = Color(0.235294, 0.607843, 0.87451, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerScene" type="Node2D" parent="Background"]
+position = Vector2(550, 50)
+
+[node name="Player" type="RigidBody2D" parent="Background/PlayerScene" node_paths=PackedStringArray("textBox", "gameOver")]
+physics_material_override = SubResource("PhysicsMaterial_ksg8i")
+gravity_scale = 0.0
+script = ExtResource("1_fbagr")
+textBox = NodePath("../../Textlabels/PointsLabel")
+gameOver = NodePath("../../Textlabels/GameOverLabel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PlayerScene/Player"]
+shape = SubResource("CircleShape2D_2ackq")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PlayerScene/Player"]
+scale = Vector2(40, 40)
+mesh = SubResource("SphereMesh_3f4ev")
+texture = SubResource("GradientTexture2D_kcak8")
+
+[node name="PachinkoPegs" type="Node2D" parent="Background"]
+z_index = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(133, 264)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(222, 261)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D2"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D2"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(304, 264)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D3"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D3"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(389, 265)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D4"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D4"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(478, 262)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D5"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D5"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(560, 265)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D6"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D6"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(645, 264)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D7"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D7"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(734, 261)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D8"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D8"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(816, 264)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D9"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D9"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(893, 264)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D10"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D10"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(982, 261)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D11"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D11"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(1064, 264)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D12"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D12"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(846, 357)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D13"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D13"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(935, 354)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D14"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D14"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(1017, 357)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D15"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D15"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(594, 357)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D16"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D16"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(683, 354)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D17"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D17"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(765, 357)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D18"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D18"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(321, 357)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D19"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D19"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(410, 354)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D20"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D20"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(492, 357)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D21"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D21"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(70, 355)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D22"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D22"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D23" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(159, 352)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D23"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D23"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D24" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(241, 355)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D24"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D24"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D25" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(118, 442)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D25"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D25"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D26" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(207, 439)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D26"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D26"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D27" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(289, 442)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D27"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D27"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D28" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(375, 442)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D28"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D28"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D29" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(464, 439)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D29"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D29"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D30" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(546, 442)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D30"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D30"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D31" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(647, 451)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D31"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D31"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D32" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(736, 448)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D32"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D32"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D33" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(818, 451)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D33"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D33"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D34" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(903, 452)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D34"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D34"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D35" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(992, 449)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D35"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D35"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D36" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(1074, 452)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D36"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D36"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D37" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(845, 535)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D37"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D37"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D38" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(934, 532)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D38"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D38"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D39" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(1016, 535)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D39"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D39"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D40" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(592, 539)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D40"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D40"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D41" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(681, 536)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D41"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D41"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D42" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(763, 539)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D42"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D42"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D43" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(329, 538)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D43"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D43"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D44" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(418, 535)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D44"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D44"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D45" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(500, 538)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D45"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D45"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D46" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(73, 542)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D46"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D46"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D47" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(162, 539)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D47"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D47"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="StaticBody2D48" type="StaticBody2D" parent="Background/PachinkoPegs"]
+position = Vector2(244, 542)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PachinkoPegs/StaticBody2D48"]
+shape = SubResource("CircleShape2D_6x8hs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/PachinkoPegs/StaticBody2D48"]
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hccdx")
+
+[node name="Walls" type="Node2D" parent="Background"]
+top_level = true
+z_index = 1
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Background/Walls"]
+position = Vector2(1148, -29)
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Walls/RigidBody2D"]
+position = Vector2(9.35334, 327)
+rotation = -3.14159
+scale = Vector2(2.02933, 31.4611)
+shape = SubResource("RectangleShape2D_j7fn2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/Walls/RigidBody2D"]
+position = Vector2(1, 350)
+scale = Vector2(50, 800)
+mesh = SubResource("BoxMesh_c122s")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="Background/Walls"]
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Walls/RigidBody2D2"]
+position = Vector2(9.35334, 327)
+rotation = -3.14159
+scale = Vector2(2.02933, 31.4611)
+shape = SubResource("RectangleShape2D_j7fn2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/Walls/RigidBody2D2"]
+position = Vector2(1, 350)
+scale = Vector2(50, 800)
+mesh = SubResource("BoxMesh_c122s")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="Background/Walls"]
+position = Vector2(449, 4)
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Walls/RigidBody2D3"]
+position = Vector2(124, 657)
+rotation = -3.14159
+scale = Vector2(72.8293, 2.42107)
+shape = SubResource("RectangleShape2D_j7fn2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/Walls/RigidBody2D3"]
+position = Vector2(121, 650)
+scale = Vector2(-1129.3, -35.7348)
+mesh = SubResource("BoxMesh_c122s")
+
+[node name="EndZones" type="Node2D" parent="Background"]
+
+[node name="100" type="Area2D" parent="Background/EndZones"]
+position = Vector2(257, 626)
+scale = Vector2(-31.6939, 1.96806)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/EndZones/100"]
+shape = SubResource("RectangleShape2D_rb2sl")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/EndZones/100"]
+self_modulate = Color(0.219608, 0.847059, 0.345098, 0.372549)
+scale = Vector2(19.8972, 19.9225)
+mesh = SubResource("BoxMesh_oub7k")
+
+[node name="Label" type="Label" parent="Background/EndZones/100"]
+offset_left = 1.0
+offset_top = -13.0
+offset_right = 29.0
+offset_bottom = 13.0
+scale = Vector2(-0.16667, 0.920813)
+text = "100"
+
+[node name="200" type="Area2D" parent="Background/EndZones"]
+position = Vector2(891, 626)
+scale = Vector2(-31.6939, 1.96806)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/EndZones/200"]
+shape = SubResource("RectangleShape2D_rb2sl")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Background/EndZones/200"]
+self_modulate = Color(0.219608, 0.847059, 0.345098, 0.372549)
+scale = Vector2(19.8833, 19.9225)
+mesh = SubResource("BoxMesh_oub7k")
+
+[node name="Label" type="Label" parent="Background/EndZones/200"]
+offset_left = 2.6819
+offset_top = -13.7191
+offset_right = 30.6819
+offset_bottom = 12.2809
+scale = Vector2(-0.16667, 0.920813)
+text = "200"
+
+[node name="Textlabels" type="Node2D" parent="Background"]
+
+[node name="PointsLabel" type="Label" parent="Background/Textlabels"]
+offset_left = 86.0
+offset_top = 16.0
+offset_right = 232.0
+offset_bottom = 106.0
+text = "Points: 0
+Balls: 3"
+label_settings = SubResource("LabelSettings_st4fu")
+
+[node name="GameOverLabel" type="Label" parent="Background/Textlabels"]
+visible = false
+offset_left = 440.0
+offset_top = 110.0
+offset_right = 718.0
+offset_bottom = 205.0
+text = "Game over!"
+label_settings = SubResource("LabelSettings_v7mlj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ansba")
+autoplay = true
+script = ExtResource("3_ljl08")
+gameMusic = ExtResource("2_ansba")
+menuMusic = ExtResource("2_ansba")
+
+[connection signal="body_entered" from="Background/EndZones/100" to="Background/PlayerScene/Player" method="_on__body_entered" binds= [100]]
+[connection signal="body_entered" from="Background/EndZones/200" to="Background/PlayerScene/Player" method="_on__body_entered" binds= [200]]

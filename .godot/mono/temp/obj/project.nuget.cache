@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "20SvTKMXIw8Kfl5qGO4HAMOaDrp3IgMBr1Zu4euVd+3ROvbd8BSh6AY6wSik08i6sYSRsVpPypxnSOuRX0E5RA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 - Game Design\\Godot\\2d Pachinko.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\silve\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

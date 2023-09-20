@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1695230348
+Debussy - Clair de Lune.mp3::AudioStreamMP3::6344312868232861668::1695180785::1695180819::1::::<><>::
+Global.gd::GDScript::-1::1695177115::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::7536641603904529107::1694635940::1694635951::1::::<><>::
+MainMenu.tscn::PackedScene::2314124852584057150::1695182262::0::1::::<><>::res://menu.gd
+menu.gd::GDScript::-1::1695176977::0::1::::<>Node<>::
+music.gd::GDScript::-1::1695181505::0::1::::<>Node<>::
+Pachinko.tscn::PackedScene::6934013031803613554::1695182756::0::1::::<><>::res://player.gd<>uid://cwnh52mmupilw
+player.gd::GDScript::-1::1695182260::0::1::::<>RigidBody2D<>::

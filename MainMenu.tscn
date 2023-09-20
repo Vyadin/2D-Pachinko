@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://778ke0nynj0a"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_kw2jg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qmlff"]
+font_size = 80
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kw2jg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1149.0
+offset_bottom = 650.0
+color = Color(0.235294, 0.607843, 0.87451, 1)
+
+[node name="GameTitle" type="Label" parent="CanvasLayer"]
+offset_left = 368.0
+offset_top = 64.0
+offset_right = 723.0
+offset_bottom = 177.0
+text = "Pachinko"
+label_settings = SubResource("LabelSettings_qmlff")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="CanvasLayer"]
+offset_left = 416.0
+offset_top = 248.0
+offset_right = 664.0
+offset_bottom = 344.0
+text = "Play"
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 448.0
+offset_top = 456.0
+offset_right = 618.0
+offset_bottom = 504.0
+text = "Credits"
+
+[connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="_on_play_button_pressed"]
