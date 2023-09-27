@@ -1,6 +1,6 @@
 Button
-Node2D
 Label
+Node2D
 RichTextLabel
 AudioStreamPlayer
 AudioStreamPlayer2D

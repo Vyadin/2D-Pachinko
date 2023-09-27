@@ -39,7 +39,7 @@ shadow_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_v7mlj"]
 font_size = 50
 
-[node name="Main Menu" type="Node2D"]
+[node name="Pachinko" type="Node2D"]
 
 [node name="Background" type="CanvasLayer" parent="."]
 
@@ -52,13 +52,14 @@ metadata/_edit_use_anchors_ = true
 [node name="PlayerScene" type="Node2D" parent="Background"]
 position = Vector2(550, 50)
 
-[node name="Player" type="RigidBody2D" parent="Background/PlayerScene" node_paths=PackedStringArray("textBox", "gameOver", "playAgain")]
+[node name="Player" type="RigidBody2D" parent="Background/PlayerScene" node_paths=PackedStringArray("textBox", "gameOver", "playAgain", "mainMenu")]
 physics_material_override = SubResource("PhysicsMaterial_ksg8i")
 gravity_scale = 0.0
 script = ExtResource("1_fbagr")
 textBox = NodePath("../../Textlabels/PointsLabel")
 gameOver = NodePath("../../Textlabels/GameOverLabel")
 playAgain = NodePath("../../Buttons/PlayAgain")
+mainMenu = NodePath("../../Buttons/MainMenu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/PlayerScene/Player"]
 shape = SubResource("CircleShape2D_2ackq")
@@ -705,10 +706,10 @@ label_settings = SubResource("LabelSettings_st4fu")
 
 [node name="GameOverLabel" type="Label" parent="Background/Textlabels"]
 visible = false
-offset_left = 440.0
-offset_top = 110.0
-offset_right = 718.0
-offset_bottom = 205.0
+offset_left = 425.0
+offset_top = 74.0
+offset_right = 703.0
+offset_bottom = 169.0
 text = "Game over!"
 label_settings = SubResource("LabelSettings_v7mlj")
 
@@ -716,11 +717,19 @@ label_settings = SubResource("LabelSettings_v7mlj")
 
 [node name="PlayAgain" type="Button" parent="Background/Buttons"]
 visible = false
-offset_left = 519.0
-offset_top = 183.0
-offset_right = 630.0
-offset_bottom = 221.0
+offset_left = 507.0
+offset_top = 149.0
+offset_right = 618.0
+offset_bottom = 187.0
 text = "Play Again"
+
+[node name="MainMenu" type="Button" parent="Background/Buttons"]
+visible = false
+offset_left = 517.0
+offset_top = 192.0
+offset_right = 613.0
+offset_bottom = 223.0
+text = "Main menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ansba")
@@ -732,3 +741,4 @@ menuMusic = ExtResource("2_ansba")
 [connection signal="body_entered" from="Background/EndZones/100" to="Background/PlayerScene/Player" method="_on__body_entered" binds= [100]]
 [connection signal="body_entered" from="Background/EndZones/200" to="Background/PlayerScene/Player" method="_on__body_entered" binds= [200]]
 [connection signal="pressed" from="Background/Buttons/PlayAgain" to="Background/PlayerScene/Player" method="_on_play_again_pressed"]
+[connection signal="pressed" from="Background/Buttons/MainMenu" to="Background/PlayerScene/Player" method="_on_main_menu_pressed"]

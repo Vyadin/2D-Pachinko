@@ -3,6 +3,7 @@ extends RigidBody2D
 @export var textBox : Label
 @export var gameOver : Label
 @export var playAgain : Button
+@export var mainMenu : Button
 
 var setup = true;
 var won = false;
@@ -10,9 +11,8 @@ var moveSpeed = 80;
 var direction = 0;
 var points = 0
 
-var totalBalls = 2
-
-var balls = totalBalls
+var maxBalls = 3
+var balls = maxBalls
 
 var spawnPoint = Vector2(550, 50)
 
@@ -36,7 +36,6 @@ func _physics_process(_delta):
 			textBox.text = "Points: " + str(points) + "\nBalls: " + str(balls)
 
 func resetBall():
-	print("Moving ball...")
 	self.gravity_scale = 0
 	self.freeze = true
 	self.global_transform.origin = spawnPoint
@@ -65,10 +64,21 @@ func _on__body_entered(body, extra_arg_0):
 				print("Game over!")
 				gameOver.visible = true
 				playAgain.visible = true
+				mainMenu.visible = true
+				Savemanager.highScores.append(points)
+				Savemanager.saveScores()
+				
 
 func _on_play_again_pressed():
 	points = 0
-	balls = totalBalls
+	balls = maxBalls
 	updateScore()
 	gameOver.visible = false
 	playAgain.visible = false
+	mainMenu.visible = false
+
+func _on_main_menu_pressed():
+	Global.goto_scene("res://MainMenu.tscn")
+	gameOver.visible = false
+	playAgain.visible = false
+	mainMenu.visible = false

@@ -1,8 +1,6 @@
-res://Global.gd
-res://player.gd
-res://music.gd
-res://menu.gd
-res://credits.gd
-res://MainMenu.tscn
 res://Pachinko.tscn
+res://MainMenu.tscn
+res://savemanager.gd
+res://player.gd
+res://menu.gd
 res://Credits.tscn
