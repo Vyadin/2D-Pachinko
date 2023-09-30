@@ -32,3 +32,20 @@ C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 - Game Design\2D Pachinko\.go
 C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 - Game Design\2D Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.pdb
 C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 - Game Design\2D Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.genruntimeconfig.cache
 C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 - Game Design\2D Pachinko\.godot\mono\temp\obj\Debug\ref\2d Pachinko.dll
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\bin\Debug\2d Pachinko.deps.json
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\bin\Debug\2d Pachinko.runtimeconfig.json
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\bin\Debug\2d Pachinko.dll
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\bin\Debug\2d Pachinko.pdb
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.csproj.AssemblyReference.cache
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.AssemblyInfoInputs.cache
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.AssemblyInfo.cs
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.csproj.CoreCompileInputs.cache
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.csproj.CopyComplete
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.dll
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\refint\2d Pachinko.dll
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.pdb
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\2d Pachinko.genruntimeconfig.cache
+C:\Users\silve\OneDrive\Documents\CSFiles\CPSC 386 Game Design\2D-Pachinko\.godot\mono\temp\obj\Debug\ref\2d Pachinko.dll

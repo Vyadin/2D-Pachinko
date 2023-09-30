@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "jg2wqLz5eXH3klV5x8spLcceF67iai7j7uOirvCe1lFo7teqOeK+NW0T0GYQh+6Xy5PFYzuIP52Z9Wn7PZjzAg==",
+  "dgSpecHash": "xWPe0wxSUdGPco/mpWBPU5897eIYwMMUzOANHwzpRu9FrvrwzBsDhYaIZcnn/a7vqx9XkZM5GTVeGJQflt4IPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 - Game Design\\2D Pachinko\\2d Pachinko.csproj",
+  "projectFilePath": "C:\\Users\\silve\\OneDrive\\Documents\\CSFiles\\CPSC 386 Game Design\\2D-Pachinko\\2d Pachinko.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\silve\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
     "C:\\Users\\silve\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
-    "C:\\Users\\silve\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512",
     "C:\\Users\\silve\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.14\\microsoft.netcore.app.runtime.win-x64.6.0.14.nupkg.sha512",
     "C:\\Users\\silve\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\silve\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+    "C:\\Users\\silve\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.14\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.14.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.14\\microsoft.aspnetcore.app.runtime.win-x64.6.0.14.nupkg.sha512"
   ],
   "logs": []
 }

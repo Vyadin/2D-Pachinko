@@ -39,14 +39,19 @@ offset_bottom = 490.0
 text = "Main Menu"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 467.0
-offset_top = 231.0
-offset_right = 639.0
-offset_bottom = 335.0
-text = "DEVELOPERS
-
+offset_left = 470.0
+offset_top = 191.0
+offset_right = 642.0
+offset_bottom = 399.0
+text = "DEVELOPER:
 Jacob Armstrong
-Angel Armendariz"
+
+WRITER:
+Jacob Armstrong
+
+PRODUCER:
+Jacob Armstrong
+"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
